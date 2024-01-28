@@ -17,6 +17,7 @@ public class Category {
 
     private String name;
 
+    // 다대다
     @ManyToMany
     @JoinTable(name = "category_item",
         joinColumns = @JoinColumn(name = "category_id"),
