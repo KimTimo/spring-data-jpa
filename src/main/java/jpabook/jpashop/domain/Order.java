@@ -23,6 +23,7 @@ public class Order {
     @JoinColumn(name = "member_id")
     private Member member;
 
+    // 컬렉션은 필드에서 초기화 하는 것이 안전하다.
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 

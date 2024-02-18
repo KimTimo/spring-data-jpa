@@ -22,6 +22,7 @@ public abstract class Item {
     private int price;
     private int stockQuantity;
 
+    // 컬렉션은 필드에서 초기화 하는 것이 안전하다.
     @ManyToMany(mappedBy = "items")
     private List<Category> categories = new ArrayList<>();
 }

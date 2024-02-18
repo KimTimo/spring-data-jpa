@@ -30,6 +30,7 @@ public class Category {
     @JoinColumn(name = "parent_id")
     private Category parent;
 
+    // 컬렉션은 필드에서 초기화 하는 것이 안전하다.
     @OneToMany(mappedBy = "parent")
     private List<Category> chile = new ArrayList<>();
 }
