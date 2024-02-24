@@ -32,5 +32,11 @@ public class Category {
 
     // 컬렉션은 필드에서 초기화 하는 것이 안전하다.
     @OneToMany(mappedBy = "parent")
-    private List<Category> chile = new ArrayList<>();
+    private List<Category> child = new ArrayList<>();
+
+    //==연관관계 메서드==//
+    public void addChildCategory(Category child) {
+        this.child.add(child);
+        child.setParent(this);
+    }
 }
